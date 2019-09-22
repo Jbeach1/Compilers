@@ -156,15 +156,15 @@ public class LexicalAnalyzer {
 										i++;
 									} else
 										// System.out.println("Error: " + line.charAt(i));
-										System.out.println("Error Invalid Character found in LexicalAnalyzer");
-									System.exit(0);
+										//System.out.println("Error Invalid Character found in LexicalAnalyzer");
+									//System.exit(0);
 									writer.println("Error: " + line.charAt(i));
 
 								} else
 									System.out.println("Error: " + line.charAt(i));
-								System.out.println("Error Invalid Character found in LexicalAnalyzer");
-								System.exit(0);
-								writer.println("Error: " + line.charAt(i));
+								//System.out.println("Error Invalid Character found in LexicalAnalyzer");
+								//System.exit(0);
+								//writer.println("Error: " + line.charAt(i));
 							}
 
 							break;
@@ -280,9 +280,9 @@ public class LexicalAnalyzer {
 
 								} else {
 									// if its not alphas, spec chars, or nums or whitespace, then error
-									writer.println("Error: "+line.charAt(i));
-									System.out.println("Error Invalid Character found in LexicalAnalyzer");
-									System.exit(0);
+									//writer.println("Error: "+line.charAt(i));
+									//System.out.println("Error Invalid Character found in LexicalAnalyzer");
+									//System.exit(0);
 									//System.out.println("Error:" + line.charAt(i));
 
 								}

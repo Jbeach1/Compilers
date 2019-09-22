@@ -23,12 +23,13 @@ public class Parser {
 		program();
 
 		if (token.equals("#")) {
-			System.out.println("Accept");
+			System.out.println("ACCEPT");
 		} else
 			reject();
 
 	} // end of main
-
+	
+	
 ////////////////////C- language methods begin here///////////////////////////////////////////////
 
 	public static void program() {
@@ -200,7 +201,6 @@ public class Parser {
 	}
 
 	public static void expressionStmt() {
-		
 		if (token.equals(";")) {
 			returnToken();
 		} else {
@@ -268,6 +268,7 @@ public class Parser {
 	}
 
 	public static void expression() {
+		
 		additiveExpression();
 		if (token.equals("<=") || token.equals("<") || token.equals(">") || token.equals(">=") || token.equals("==")
 				|| token.equals("!=")) {
@@ -277,6 +278,7 @@ public class Parser {
 	}
 
 	public static void var1() {
+	
 		if (token.equals("[")) {
 			returnToken();
 			expression();
@@ -291,13 +293,14 @@ public class Parser {
 							expression();
 							if (token.equals("]")) {
 								returnToken();
+								var1();
 							} else
 								reject();
 						} else
-							reject();
+							epsilon();
 
 					} else
-						expression();
+						reject();
 
 				} else
 					epsilon();
@@ -309,7 +312,7 @@ public class Parser {
 			returnToken();
 			expression();
 		} 
-
+		
 	}
 
 	public static void relop() {
@@ -327,7 +330,7 @@ public class Parser {
 	}
 
 	public static void additiveExpression1() {
-		
+	
 		if (token.equals("+") || token.equals("-")) {
 			addop();
 			term();
@@ -367,6 +370,7 @@ public class Parser {
 	}
 
 	public static void factor() {
+		
 		if (token.contains("NUM: ")) {
 			returnToken();
 		} else if (token.contains("ID: ")) {
@@ -381,7 +385,7 @@ public class Parser {
 				reject();
 
 		}
-
+		
 	}
 
 	public static void factor1() {
@@ -435,12 +439,13 @@ public class Parser {
 	}
 
 	public static void reject() {
-		System.out.println("Reject on Token: " + token);
+	
+		System.out.println("REJECT");
 		System.exit(0);
 	}
 
 	public static void returnToken() {
-		System.out.println(token);
+		//System.out.println(token);
 		token = scanner.nextLine();
 	}
 

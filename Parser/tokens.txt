@@ -1,26 +1,439 @@
 K: void
-ID: main
+ID: sub
 (
 K: int
-ID: x
+ID: a
+,
+K: int
+ID: b
+)
+{
+ID: a
+-
+ID: b
+;
+ID: a
+>
+ID: b
+;
+ID: a
+<=
+ID: b
+;
+K: return
+;
+}
+K: int
+ID: foointvoid
+;
+K: int
+ID: e
+[
+NUM: 44
+]
+;
+K: int
+ID: foointvoid
+(
+K: int
+ID: a
+,
+K: int
+ID: b
+[
+]
+,
+K: int
+ID: c
+,
+K: int
+ID: d
 [
 ]
 )
 {
-ID: x
-=
-ID: y
+K: int
+ID: e
+;
+K: int
+ID: m
+;
+K: int
+ID: f
+;
+K: int
+ID: g
+;
+K: if
+(
+ID: a
++
+ID: b
 [
-NUM: 70
+NUM: 1
++
+NUM: 2
+*
+NUM: 3
+]
+>
+(
+ID: a
+*
+(
+(
+ID: a
+)
+)
+)
+)
+K: if
+(
+ID: b
+[
+NUM: 1
+]
+>
+ID: b
+[
+NUM: 4
++
+(
+NUM: 5
+*
+(
+NUM: 6
+-
+(
+NUM: 7
+/
+(
+NUM: 8
+)
+)
+)
+)
+]
+)
+ID: main
+(
+)
+;
+K: else
+{
+K: int
+ID: f
+[
+NUM: 9
+]
+;
+}
+ID: c
+=
+ID: d
+[
+ID: b
+[
+ID: b
+[
+NUM: 0
+]
+]
+]
++
+(
+NUM: 9
+*
+ID: d
+[
+ID: main
+(
+)
++
+NUM: 1
+]
++
+ID: d
+[
+ID: a
+*
+NUM: 10
+]
+)
++
+ID: c
+*
+ID: c
+/
+ID: c
+/
+ID: c
+/
+ID: c
++
+ID: c
++
+ID: c
++
+ID: c
+;
+;
+;
+;
+;
+{
+K: int
+ID: q
+;
+{
+{
+K: int
+ID: f
+[
+NUM: 99
+]
+;
+ID: f
+[
+NUM: 0
 ]
 =
-ID: z
+ID: f
+[
+NUM: 1
+]
 =
-ID: n
-=
+ID: d
+[
+NUM: 0
+]
++
+ID: c
+*
+NUM: 2
+;
+K: return
+ID: foointvoid
+(
 ID: b
+[
+NUM: 1
+]
++
+ID: q
+,
+ID: b
+,
+ID: c
++
+ID: d
+[
+NUM: 11
+]
++
+ID: d
+[
+NUM: 12
+]
+/
+(
+ID: d
+[
+NUM: 13
+]
+/
+(
+ID: d
+[
+NUM: 14
+]
+*
+ID: d
+[
+NUM: 15
+]
+)
+)
+,
+ID: f
+)
+;
+}
+}
+ID: q
++
+NUM: 4
+;
+}
+K: while
+(
+NUM: 16
++
+NUM: 17
+/
+NUM: 18
+*
+NUM: 19
+-
+NUM: 20
+-
+(
+NUM: 21
+-
+NUM: 22
+)
+)
+{
+K: int
+ID: g
+;
+K: if
+(
+NUM: 214
+>
+NUM: 214
+)
+{
+K: return
+ID: g
+;
+K: return
+ID: f
+;
+}
+K: return
+ID: g
++
+ID: foointvoid
+/
+NUM: 99
+;
+}
+K: while
+(
+(
+NUM: 90
+<
+NUM: 91
+)
+!=
+(
+NUM: 91
+>
+NUM: 92
+)
+)
+;
+ID: e
 =
-ID: r
+ID: a
+>
+NUM: 0
++
+NUM: 4
+;
+ID: m
+=
+ID: f
+=
+ID: g
+=
+ID: d
+[
+NUM: 1
++
+ID: main
+(
+)
+/
+NUM: 4
+/
+(
+NUM: 4
+-
+NUM: 4
++
+NUM: 4
+*
+NUM: 4
+)
+]
+=
+ID: c
+;
+K: if
+(
+ID: a
+)
+;
+K: else
+;
+K: if
+(
+ID: m
+>
+ID: f
+)
+{
+K: return
+ID: d
+[
+NUM: 0
+]
+;
+}
+K: else
+K: return
+ID: d
+[
+NUM: 1
+]
+;
+}
+K: int
+ID: main
+(
+K: void
+)
+{
+K: int
+ID: a
+;
+K: int
+ID: b
+[
+NUM: 1
+]
+;
+K: int
+ID: c
+;
+K: int
+ID: d
+[
+NUM: 1
+]
+;
+ID: sub
+(
+NUM: 4
+,
+NUM: 6
+)
+;
+ID: intmainvoid
+(
+ID: a
+,
+ID: b
+,
+ID: c
+,
+ID: d
+)
+;
+K: return
+NUM: 0
 ;
 }
 #
