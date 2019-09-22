@@ -1,0 +1,4 @@
+void main ( int x[]){
+
+x = y[70] = z = n = b = r;
+}

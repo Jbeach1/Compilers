@@ -1,0 +1,26 @@
+K: void
+ID: main
+(
+K: int
+ID: x
+[
+]
+)
+{
+ID: x
+=
+ID: y
+[
+NUM: 70
+]
+=
+ID: z
+=
+ID: n
+=
+ID: b
+=
+ID: r
+;
+}
+#
