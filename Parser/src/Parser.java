@@ -28,8 +28,7 @@ public class Parser {
 			reject();
 
 	} // end of main
-	
-	
+
 ////////////////////C- language methods begin here///////////////////////////////////////////////
 
 	public static void program() {
@@ -45,7 +44,7 @@ public class Parser {
 		if (token.contains("K: ")) {
 			declaration();
 			declarationList1();
-		} 
+		}
 	}
 
 	public static void declaration() {
@@ -54,7 +53,8 @@ public class Parser {
 			returnToken();
 			declaration1();
 
-		} else reject();  //ghjhgfd
+		} else
+			reject(); // ghjhgfd
 	}
 
 	public static void declaration1() {
@@ -67,14 +67,14 @@ public class Parser {
 	}
 
 	public static void varDeclaration() {
-		
+
 		typeSpecifier();
 		if (token.contains("ID: ")) {
 			returnToken();
 			varDeclaration1();
 		} else
 			reject();
-		
+
 	}
 
 	public static void varDeclaration1() {
@@ -112,7 +112,7 @@ public class Parser {
 			if (token.equals(")")) {
 				returnToken();
 				compoundStmt();
-				
+
 			} else
 				reject();
 		}
@@ -168,17 +168,17 @@ public class Parser {
 	}
 
 	public static void localDeclaration() {
-		
+
 		if (token.equals("K: int") || token.equals("K: float") || token.equals("K: void")) {
 			varDeclaration();
 			localDeclaration();
-			
+
 		}
 
 	}
 
 	public static void statementList() {
-	
+
 		if (token.contains("K: ") || token.contains("ID: ") || token.equals("(") || token.equals("{")
 				|| token.equals(";")) {
 			statement();
@@ -268,7 +268,6 @@ public class Parser {
 	}
 
 	public static void expression() {
-		
 		additiveExpression();
 		if (token.equals("<=") || token.equals("<") || token.equals(">") || token.equals(">=") || token.equals("==")
 				|| token.equals("!=")) {
@@ -278,7 +277,7 @@ public class Parser {
 	}
 
 	public static void var1() {
-	
+
 		if (token.equals("[")) {
 			returnToken();
 			expression();
@@ -288,6 +287,7 @@ public class Parser {
 					returnToken();
 					if (token.contains("ID: ")) {
 						returnToken();
+						var1();
 						if (token.equals("[")) {
 							returnToken();
 							expression();
@@ -299,7 +299,10 @@ public class Parser {
 						} else
 							epsilon();
 
+					} else if (token.contains("NUM: ")) {
+						expression();
 					} else
+
 						reject();
 
 				} else
@@ -311,8 +314,8 @@ public class Parser {
 		} else if (token.equals("=")) {
 			returnToken();
 			expression();
-		} 
-		
+		}
+
 	}
 
 	public static void relop() {
@@ -330,7 +333,7 @@ public class Parser {
 	}
 
 	public static void additiveExpression1() {
-	
+
 		if (token.equals("+") || token.equals("-")) {
 			addop();
 			term();
@@ -350,6 +353,7 @@ public class Parser {
 	public static void term() {
 		factor();
 		term1();
+
 	}
 
 	public static void term1() {
@@ -370,7 +374,7 @@ public class Parser {
 	}
 
 	public static void factor() {
-		
+
 		if (token.contains("NUM: ")) {
 			returnToken();
 		} else if (token.contains("ID: ")) {
@@ -385,7 +389,7 @@ public class Parser {
 				reject();
 
 		}
-		
+
 	}
 
 	public static void factor1() {
@@ -439,13 +443,12 @@ public class Parser {
 	}
 
 	public static void reject() {
-	
 		System.out.println("REJECT");
 		System.exit(0);
 	}
 
 	public static void returnToken() {
-		//System.out.println(token);
+		System.out.println(token);
 		token = scanner.nextLine();
 	}
 
