@@ -64,6 +64,7 @@ public class Parser {
 			funDeclaration1();
 		} else
 			reject();
+		//hello
 	}
 
 	public static void varDeclaration() {
@@ -448,7 +449,7 @@ public class Parser {
 	}
 
 	public static void returnToken() {
-		System.out.println(token);
+		//System.out.println(token);
 		token = scanner.nextLine();
 	}
 
